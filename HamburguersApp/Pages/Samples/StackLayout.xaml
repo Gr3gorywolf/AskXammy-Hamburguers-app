@@ -19,8 +19,8 @@
                 <BoxView BackgroundColor="DeepSkyBlue" VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand"/>
             </StackLayout>
             <!--Third row-->
-            <StackLayout  Orientation="Horizontal" HeightRequest="120" VerticalOptions="FillAndExpand">
-                <BoxView BackgroundColor="SkyBlue" VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand"/>
+            <StackLayout  Orientation="Horizontal" HeightRequest="180" >
+                <BoxView BackgroundColor="SkyBlue"  HorizontalOptions="FillAndExpand"/>
             </StackLayout>
         </StackLayout>
     </ContentPage.Content>

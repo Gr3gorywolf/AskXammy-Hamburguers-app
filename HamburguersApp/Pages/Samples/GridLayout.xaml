@@ -7,10 +7,32 @@
              Title="GridLayout"
              x:Class="HamburguersApp.Pages.Samples.GridLayout">
     <ContentPage.Content>
-        <StackLayout>
-            <Label Text="Welcome to Xamarin.Forms!"
-                VerticalOptions="CenterAndExpand" 
-                HorizontalOptions="CenterAndExpand" />
-        </StackLayout>
+        <Grid>
+            <!--#region Row definitions-->
+            <Grid.RowDefinitions>
+                <RowDefinition Height="80"></RowDefinition>
+                <RowDefinition Height="120"></RowDefinition>
+                <RowDefinition Height="180"></RowDefinition>
+            </Grid.RowDefinitions>
+            <!--#endregion-->
+            
+            <!--#region Column definitions-->
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"></ColumnDefinition>
+                <ColumnDefinition Width="*"></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+            <!--#endregion-->
+
+            <!--#region Contents-->
+            <!--Row 0-->
+             <BoxView Grid.Row="0" Grid.Column="0" BackgroundColor="DeepSkyBlue" VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand"/>
+             <BoxView Grid.Row="0" Grid.Column="1" BackgroundColor="LightBlue" VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand"/>
+            <!--Row 1-->
+             <BoxView Grid.Row="1" Grid.Column="0" BackgroundColor="LightBlue" VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand"/>
+             <BoxView Grid.Row="1" Grid.Column="1" BackgroundColor="DeepSkyBlue" VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand"/>
+            <!--Row 2-->
+             <BoxView Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="2" BackgroundColor="SkyBlue" VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand"/>
+            <!--#endregion-->
+        </Grid>
     </ContentPage.Content>
 </ContentPage>
