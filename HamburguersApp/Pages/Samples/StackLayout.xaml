@@ -10,18 +10,16 @@
         <StackLayout>
             <!--First row-->
             <StackLayout  Orientation="Horizontal" HeightRequest="80">
-                <BoxView BackgroundColor="DeepSkyBlue" VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand"/>
-                <BoxView BackgroundColor="LightBlue" VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand"/>
+                <Button BackgroundColor="DeepSkyBlue" VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand"/>
+                <Button BackgroundColor="LightBlue" VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand"/>
             </StackLayout>
             <!--Second row-->
             <StackLayout  Orientation="Horizontal" HeightRequest="120">
-                <BoxView BackgroundColor="LightBlue" VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand"/>
-                <BoxView BackgroundColor="DeepSkyBlue" VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand"/>
+                <Button BackgroundColor="LightBlue" VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand"/>
+                <Button BackgroundColor="DeepSkyBlue" VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand"/>
             </StackLayout>
             <!--Third row-->
-            <StackLayout  Orientation="Horizontal" HeightRequest="180" >
-                <BoxView BackgroundColor="SkyBlue"  HorizontalOptions="FillAndExpand"/>
-            </StackLayout>
+                <Button BackgroundColor="SkyBlue" VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand"/>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

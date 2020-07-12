@@ -12,7 +12,7 @@
             <Grid.RowDefinitions>
                 <RowDefinition Height="80"></RowDefinition>
                 <RowDefinition Height="120"></RowDefinition>
-                <RowDefinition Height="180"></RowDefinition>
+                <RowDefinition Height="*"></RowDefinition>
             </Grid.RowDefinitions>
             <!--#endregion-->
             

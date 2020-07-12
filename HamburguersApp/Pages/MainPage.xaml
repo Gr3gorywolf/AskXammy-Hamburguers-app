@@ -4,11 +4,11 @@
              xmlns:d="http://xamarin.com/schemas/2014/forms/design"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
             xmlns:samples="clr-namespace:HamburguersApp.Pages.Samples"
+            xmlns:pages="clr-namespace:HamburguersApp.Pages"
              mc:Ignorable="d"
             Title="HamburguersApp"
              x:Class="HamburguersApp.Pages.MainPage">
-          <samples:StackLayout/>
-          <samples:GridLayout/>
-
+          <pages:HamburguerForm/>
+          <pages:HamburguersList/>
 
 </TabbedPage>
