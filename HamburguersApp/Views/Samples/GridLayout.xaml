@@ -5,7 +5,7 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              mc:Ignorable="d"
              Title="GridLayout"
-             x:Class="HamburguersApp.Pages.Samples.GridLayout">
+             x:Class="HamburguersApp.Views.Samples.GridLayout">
     <ContentPage.Content>
         <Grid>
             <!--#region Row definitions-->

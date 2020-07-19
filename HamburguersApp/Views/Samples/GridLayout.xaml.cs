@@ -7,12 +7,12 @@ using System.Threading.Tasks;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
-namespace HamburguersApp.Pages
+namespace HamburguersApp.Views.Samples
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
-    public partial class HamburguerForm : ContentPage
+    public partial class GridLayout : ContentPage
     {
-        public HamburguerForm()
+        public GridLayout()
         {
             InitializeComponent();
         }

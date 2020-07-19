@@ -1,0 +1,53 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Name="pgHamburguerForm"
+             xmlns:viewmodels="clr-namespace:HamburguersApp.ViewModels"
+             Title="Formulario de hamburguesas"
+             x:Class="HamburguersApp.Views.HamburguerForm">
+    <ContentPage.BindingContext>
+        <viewmodels:HamburguersFormViewModel Context="{x:Reference pgHamburguerForm}"/>
+    </ContentPage.BindingContext>
+    <ContentPage.Content>
+        <ScrollView>
+            <Grid RowDefinitions="auto,auto,auto,auto"  RowSpacing="20"  ColumnDefinitions="auto,*" Padding="40" >
+
+                <Label Grid.Row="0" 
+                       VerticalOptions="CenterAndExpand"   
+                       Grid.Column="0" 
+                       Text="Nombre:"/>
+                
+                <Entry Grid.Row="0" 
+                       Text="{Binding Name, Mode=TwoWay}"  
+                       Grid.Column="1" />
+
+                <Label Text="Descripcion:" 
+                       Grid.Row="1" 
+                       Grid.ColumnSpan="2"/>
+                
+                <Entry Grid.Row="2" 
+                       Text="{Binding Description, Mode=TwoWay}" 
+                       Grid.ColumnSpan="2" />
+
+                <Button IsVisible="{Binding IsBusy, Converter={StaticResource BoolInverter}}" 
+                        Text="Enviar" 
+                        Grid.Row="3" 
+                        Grid.ColumnSpan="2" 
+                        Command="{Binding PostHamburguer}"/>
+                
+                <ActivityIndicator 
+                        IsVisible="{Binding IsBusy}" 
+                        Grid.Row="3"
+                        Grid.ColumnSpan="2"
+                        HeightRequest="30"
+                        WidthRequest="30"
+                        IsRunning="True"
+                        HorizontalOptions="CenterAndExpand"/>
+
+            </Grid>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>

@@ -5,7 +5,7 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              mc:Ignorable="d"
              Title="StackLayout"
-             x:Class="HamburguersApp.Pages.Samples.StackLayout">
+             x:Class="HamburguersApp.Views.Samples.StackLayout">
     <ContentPage.Content>
         <StackLayout>
             <!--First row-->

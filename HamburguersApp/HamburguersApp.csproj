@@ -16,16 +16,16 @@
   </ItemGroup>
 
   <ItemGroup>
-    <EmbeddedResource Update="Pages\HamburguerForm.xaml">
+    <EmbeddedResource Update="Views\HamburguerForm.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
-    <EmbeddedResource Update="Pages\HamburguersList.xaml">
+    <EmbeddedResource Update="Views\HamburguersList.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
-    <EmbeddedResource Update="Pages\Samples\GridLayout.xaml">
+    <EmbeddedResource Update="Views\Samples\GridLayout.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
-    <EmbeddedResource Update="Pages\Samples\StackLayout.xaml">
+    <EmbeddedResource Update="Views\Samples\StackLayout.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
   </ItemGroup>
