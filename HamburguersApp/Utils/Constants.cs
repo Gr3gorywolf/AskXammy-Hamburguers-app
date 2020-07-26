@@ -6,8 +6,22 @@ namespace HamburguersApp.Utils
 {
    public class Constants
     {
-        public const Environment Env = Environment.Development;
+        public const Environment Env = Environment.Production;
 
+        public static string BaseUrl
+        {
+            get
+            {
+                if(Env == Environment.Production)
+                {
+                    return "http://hamburguersapp.azurewebsites.net/api/";
+                }
+                else
+                {
+                    return "localhost:44355";
+                }
+            }
+        }
         public enum Environment
         {
             Development = 0,

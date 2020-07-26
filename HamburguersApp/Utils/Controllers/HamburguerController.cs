@@ -1,4 +1,5 @@
 ﻿using HamburguersApp.Models;
+using Refit;
 using System;
 using System.Collections.Generic;
 using System.Text;
@@ -8,23 +9,15 @@ namespace HamburguersApp.Utils.Controllers
 {
    public class HamburguerController
     {
-        //Todo: Implementar refit en esta parte
+       
         public async Task<Hamburguer> PostHamburguer(Hamburguer hamburguer)
         {
-            await Task.Delay(1000);
-            _hamburguers.Add(hamburguer);
-            return hamburguer;
+            return await RestService.For<IHamburguerApi>(Constants.BaseUrl).Create(hamburguer);
         }
-
-        //Todo: Implementar refit en esta parte
         public async Task<List<Hamburguer>> GetHamburguers()
         {
-            await Task.Delay(1000);
-            return _hamburguers;
+            return await RestService.For<IHamburguerApi>(Constants.BaseUrl).GetAll();
         }
-
-        //Solamete para propositos de prueba
-        private static List<Hamburguer> _hamburguers = new List<Hamburguer>();
 
     }
 }

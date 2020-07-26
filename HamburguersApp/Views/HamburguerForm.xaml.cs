@@ -17,6 +17,7 @@ namespace HamburguersApp.Views
         public HamburguerForm()
         {
             InitializeComponent();
+          
         }
          
 

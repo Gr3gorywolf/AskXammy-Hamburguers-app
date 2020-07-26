@@ -12,39 +12,51 @@
         <viewmodels:HamburguerListViewModel Context="{x:Reference pgHamburguersList}" />
     </ContentPage.BindingContext>
     <ContentPage.Content>
-        <ListView HasUnevenRows="True" 
+        <StackLayout>
+            <ListView HasUnevenRows="True" 
                   Footer=""
+                  SeparatorVisibility="None"
                   ItemsSource="{Binding Hamburguers}"
                   IsPullToRefreshEnabled="True"
+                  SelectionMode="None"
                   IsRefreshing="{Binding IsBusy}"
                   RefreshCommand="{Binding FetchHamburguers}">
-            <ListView.ItemTemplate>
-                <DataTemplate>
-                    <ViewCell>
-                        <Grid RowDefinitions="100" ColumnDefinitions="90,*" ColumnSpacing="25">
-                            <Image BackgroundColor="Red"
-                                   Aspect="AspectFit" 
-                                   HeightRequest="60"
-                                   WidthRequest="80"
-                                   VerticalOptions="CenterAndExpand"
-                                   HorizontalOptions="CenterAndExpand" 
-                                   Grid.Row="0" 
-                                   Grid.Column="0"/>
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <Frame BackgroundColor="{StaticResource primary}" Margin="10" CornerRadius="10">
+                            <Grid RowDefinitions="100" ColumnDefinitions="90,*" Padding="0" ColumnSpacing="30">
+                                <Frame CornerRadius="5"
+                                       Padding="0"
+                                       VerticalOptions="CenterAndExpand"
+                                       HorizontalOptions="CenterAndExpand" 
+                                       HeightRequest="100"
+                                       WidthRequest="100"
+                                       Grid.Row="0" 
+                                       Grid.Column="0">
+                                       <Image Source="{Binding Image}"
+                                              Aspect="AspectFill" 
+                                              VerticalOptions="FillAndExpand"
+                                              HorizontalOptions="FillAndExpand"                                  
+                                              />
+                                </Frame>
 
-                            <Grid RowDefinitions="auto,auto" 
+                                <Grid 
+                                  RowDefinitions="auto,auto,auto" 
                                   ColumnDefinitions="*"    
                                   VerticalOptions="CenterAndExpand"
                                   Grid.Row="0" 
                                   Grid.Column="1">
-                                
-                                <Label Text="{Binding Name}" Grid.Row="0" Grid.Column="0" />
-                                <Label Text="{Binding Description}" Grid.Row="1" Grid.Column="0"/>
+                                    <Label Text="{Binding Name}" FontSize="Medium" FontAttributes="Bold" Grid.Row="0" Grid.Column="0" />
+                                    <Label Text="{Binding Description}" FontSize="Small" Grid.Row="1" Grid.Column="0"/>
+                                        <Label Text="0.0 (0 ratings)" Grid.Row="2"  FontSize="Small"/>
+                                    </Grid>
                             </Grid>
-                        </Grid>
-                    </ViewCell>
-                </DataTemplate>
-            </ListView.ItemTemplate>
-        </ListView>
-
+                            </Frame>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+        </StackLayout>
     </ContentPage.Content>
 </ContentPage>

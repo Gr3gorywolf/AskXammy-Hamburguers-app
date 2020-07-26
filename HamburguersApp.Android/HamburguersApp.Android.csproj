@@ -85,7 +85,9 @@
     <AndroidResource Include="Resources\mipmap-xxxhdpi\icon.png" />
     <AndroidResource Include="Resources\mipmap-xxxhdpi\launcher_foreground.png" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\camera.png" />
+  </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\HamburguersApp\HamburguersApp.csproj">
       <Project>{1A1B9885-1ABE-4A56-9F47-EAF7E7B2FBB0}</Project>

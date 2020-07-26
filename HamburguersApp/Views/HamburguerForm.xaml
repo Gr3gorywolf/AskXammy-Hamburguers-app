@@ -13,34 +13,60 @@
     </ContentPage.BindingContext>
     <ContentPage.Content>
         <ScrollView>
-            <Grid RowDefinitions="auto,auto,auto,auto"  RowSpacing="20"  ColumnDefinitions="auto,*" Padding="40" >
+            <Grid RowDefinitions="auto,auto,auto,auto,auto"  RowSpacing="20"  ColumnDefinitions="auto,*" Padding="40" >
 
-                <Label Grid.Row="0" 
+                <Grid Grid.Row="0" RowDefinitions="auto,auto" ColumnDefinitions="*"  Grid.ColumnSpan="2"  RowSpacing="10">
+                    <Image 
+                        Grid.Row="0"
+                        Grid.Column="0"
+                       HorizontalOptions="CenterAndExpand" 
+                       Source="{Binding ImageUrl}"
+                       HeightRequest="90"
+                       WidthRequest="90"/>
+                    <ImageButton Grid.Row="1"
+                                 Grid.Column="0"
+                                 Source="camera.png"
+                                 Margin="0,-40,-60,0"
+                                 CornerRadius="70"
+                                 HorizontalOptions="CenterAndExpand"
+                                 Padding="10"
+                                 Command="{Binding InputImage}"
+                                 BackgroundColor="{StaticResource accent}"
+                                 HeightRequest="50"
+                                 WidthRequest="50"/>
+                </Grid>
+               
+                <Label Grid.Row="1" 
                        VerticalOptions="CenterAndExpand"   
                        Grid.Column="0" 
                        Text="Nombre:"/>
                 
-                <Entry Grid.Row="0" 
+                <Entry Grid.Row="1" 
                        Text="{Binding Name, Mode=TwoWay}"  
                        Grid.Column="1" />
 
                 <Label Text="Descripcion:" 
-                       Grid.Row="1" 
+                       Grid.Row="2" 
                        Grid.ColumnSpan="2"/>
                 
-                <Entry Grid.Row="2" 
+                
+                
+                <Entry Grid.Row="3" 
                        Text="{Binding Description, Mode=TwoWay}" 
                        Grid.ColumnSpan="2" />
 
                 <Button IsVisible="{Binding IsBusy, Converter={StaticResource BoolInverter}}" 
                         Text="Enviar" 
-                        Grid.Row="3" 
+                        Grid.Row="4"
+                        BackgroundColor="{StaticResource accent}"
                         Grid.ColumnSpan="2" 
+                        CornerRadius="20"
+                        TextColor="White"
                         Command="{Binding PostHamburguer}"/>
                 
                 <ActivityIndicator 
                         IsVisible="{Binding IsBusy}" 
-                        Grid.Row="3"
+                        Grid.Row="4"
                         Grid.ColumnSpan="2"
                         HeightRequest="30"
                         WidthRequest="30"

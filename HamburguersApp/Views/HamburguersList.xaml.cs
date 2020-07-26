@@ -21,6 +21,7 @@ namespace HamburguersApp.Views
 
         protected override void OnAppearing()
         {
+            
             _instance = this;
             base.OnAppearing();
             ((HamburguerListViewModel)_instance.BindingContext)

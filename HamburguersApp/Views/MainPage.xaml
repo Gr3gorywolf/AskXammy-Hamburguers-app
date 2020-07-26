@@ -27,10 +27,14 @@
                        HorizontalOptions="CenterAndExpand" 
                        Margin="0,20,0,0"/>
                     <Button CornerRadius="20" 
+                        BackgroundColor="{StaticResource accent}"
                         x:Name="btnHamburguersList" 
+                        TextColor="White"
                         Text="Ver hamburguers disponibles"/>
                     <Button CornerRadius="20" 
                         x:Name="btnHamburguersForm" 
+                        BackgroundColor="{StaticResource accent}"
+                        TextColor="White"
                         Text="Agregar nuevo hamburguer"/>
                 </StackLayout>
             </StackLayout>

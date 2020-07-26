@@ -20,8 +20,6 @@ namespace HamburguersApp.Views
         public MainPage()
         {
             InitializeComponent();
-            
-
             btnHamburguersList.Clicked += delegate
             {
                 Navigation.PushAsync(new HamburguersList());
@@ -31,6 +29,13 @@ namespace HamburguersApp.Views
             {
                 Navigation.PushAsync(new HamburguerForm());
             };
+
+
+        }
+
+        protected override void OnAppearing()
+        { 
+            base.OnAppearing();
         }
     }
 }

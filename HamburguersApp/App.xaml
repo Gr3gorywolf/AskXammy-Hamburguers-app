@@ -9,5 +9,8 @@
     <Application.Resources>
         <converters:NegateBoolConverter x:Key="BoolInverter"/>
 
+        <Color x:Key="primary">#F3D5C5</Color>
+        <Color x:Key="accent">#ffab00</Color>
+        <Color x:Key="PrimaryDark">#ff6f00</Color>
     </Application.Resources>
 </Application>
