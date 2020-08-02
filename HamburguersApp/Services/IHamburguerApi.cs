@@ -3,8 +3,9 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 using System.Threading.Tasks;
+using HamburguersApp.Models;
 
-namespace HamburguersApp.Models
+namespace HamburguersApp.Services
 {
     interface IHamburguerApi
     {

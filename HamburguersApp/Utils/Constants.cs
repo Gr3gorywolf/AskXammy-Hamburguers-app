@@ -18,7 +18,7 @@ namespace HamburguersApp.Utils
                 }
                 else
                 {
-                    return "localhost:44355";
+                    return "http://localhost:44355/";
                 }
             }
         }
